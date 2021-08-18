@@ -1,16 +1,16 @@
 import os
 #FFtest SDK
-class FreeFireMAXandroidSmoke(object):
+class FFMandroidSmoke:
 
-    def __init__(self,open):
+    def __init__(self):
         # 安卓手机安装
         # IOS手机安装
         # 模拟器单开
         # 模拟器多开
 
         #异常处理统计
-        pass_count = 0  # FreeFireMAXandroidSmoke+= 1
-        filed_count = 0  # FreeFireMAXandroidSmoke+= 1
+        self.pass_count = 0  # FreeFireMAXandroidSmoke+= 1
+        self.filed_count = 0  # FreeFireMAXandroidSmoke+= 1
 
 
     # 登陆
@@ -18,7 +18,6 @@ class FreeFireMAXandroidSmoke(object):
         print("登陆成功")
         # 点击
         # 截图
-        pass
 
     # 登出
     def check_logout(self):
