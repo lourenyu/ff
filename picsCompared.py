@@ -7,12 +7,12 @@
 #给出结果
 
 
-import cv2
-import numpy as np
-from PIL import Image
+import cv2 #opencv-python库
+import numpy as np  #矩阵运算库
+from PIL import Image #pillow-pil图像处理库
 import requests
 from io import BytesIO
-import matplotlib
+import matplotlib #绘图库
 
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
