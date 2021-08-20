@@ -14,4 +14,14 @@ import cv2
 # pg.click(x=currentMouseX, y=currentMouseY, clicks=2, interval=0.0, button= "left", duration=0.0, tween=pg.linear)
 # im2 = pg.screenshot(r'.\Source_Pics\Result_Pics\首次截屏.png')
 
-img1 = cv2.imread('')#读取图像
+# img1 = cv2.imread('ceshi.jpg') #读取图像
+# cv2.imshow('原始图像', img1)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+
+
+img = cv2.imread("test_case.png")  #导入图片
+cv2.namedWindow("Image")  #命名容器
+cv2.imshow("Image",img)  #窗口展示
+cv2.waitKey(0)   #刷新率
+cv2.destroyAllWindows()  #close
