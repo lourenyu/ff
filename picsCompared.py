@@ -6,7 +6,6 @@
 #数据统计
 #给出结果
 
-
 import cv2 #opencv-python库
 import numpy as np  #矩阵运算库
 from PIL import Image #pillow-pil图像处理库
@@ -196,17 +195,17 @@ def runAllImageSimilaryFun(para1, para2):
     hash1 = aHash(img1)
     hash2 = aHash(img2)
     n1 = cmpHash(hash1, hash2)
-    print('均值哈希算法相似度aHash：', n1)
+    print('均值hash算法相似度aHash：%d',100-n1)
 
     hash1 = dHash(img1)
     hash2 = dHash(img2)
     n2 = cmpHash(hash1, hash2)
-    print('差值哈希算法相似度dHash：', n2)
+    print('差值hash算法相似度dHash：', n2)
 
     hash1 = pHash(img1)
     hash2 = pHash(img2)
     n3 = cmpHash(hash1, hash2)
-    print('感知哈希算法相似度pHash：', n3)
+    print('感知hash算法相似度pHash：', n3)
 
     n4 = classify_hist_with_split(img1, img2)
     print('三直方图算法相似度：', n4)
@@ -214,8 +213,7 @@ def runAllImageSimilaryFun(para1, para2):
     n5 = calculate(img1, img2)
     print("单通道的直方图", n5)
     print("%d %d %d %.2f %.2f " % (n1, n2, n3, round(n4[0], 2), n5[0]))
-    print("%.2f %.2f %.2f %.2f %.2f " % (1 - float(n1 / 64), 1 -
-                                         float(n2 / 64), 1 - float(n3 / 64), round(n4[0], 2), n5[0]))
+    print("%.2f %.2f %.2f %.2f %.2f " % (1 - float(n1 / 64), 1 - float(n2 / 64), 1 - float(n3 / 64), round(n4[0], 2), n5[0]))
 
     plt.subplot(121)
     plt.imshow(Image.fromarray(cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)))
@@ -223,8 +221,8 @@ def runAllImageSimilaryFun(para1, para2):
     plt.imshow(Image.fromarray(cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)))
     plt.show()
 
-
 if __name__ == "__main__":
     p1 = "https://ww3.sinaimg.cn/bmiddle/007INInDly1g336j2zziwj30su0g848w.jpg"
     p2 = "https://ww2.sinaimg.cn/bmiddle/007INInDly1g336j10d32j30vd0hnam6.jpg"
     runAllImageSimilaryFun(p1, p2)
+

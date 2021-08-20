@@ -12,7 +12,6 @@ def matlab_style_gauss2D(shape=(3,3),sigma=0.5):
         h /= sumh
     return h
 
-
 def filter2(x, kernel, mode='same'):
     return convolve2d(x, np.rot90(kernel, 2), mode=mode)
 

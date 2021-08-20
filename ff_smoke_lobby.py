@@ -1,17 +1,20 @@
-import os
+import os #系统文件处理包
+import uiautomator2 as u2 #android控制包
+import pyautogui as pg
 #FFtest SDK
+
+
+location=pg.locateOnScreen(image=r'C:\Users\renyu.lou\Desktop\py\ff\TAP TO BEGIN.png') #判定目标截图在系统上的位置
+print(location)#输出坐标
+
+
+#拉取log
 class FFMandroidSmoke:
 
     def __init__(self):
-        # 安卓手机安装
-        # IOS手机安装
-        # 模拟器单开
-        # 模拟器多开
-
         #异常处理统计
         self.pass_count = 0  # FreeFireMAXandroidSmoke+= 1
         self.filed_count = 0  # FreeFireMAXandroidSmoke+= 1
-
 
     # 登陆
     def check_login(self):
@@ -214,7 +217,4 @@ class FFMandroidSmoke:
         # 截图
         # 点击&切换tab
         pass
-
-
-
 
