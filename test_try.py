@@ -48,13 +48,13 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-img1 = cv.imread(r"test_case.png")
+img1 = cv.imread(r"test_small_logo.png")
+# img = img1[0:426,43:400]
+rows,cols = img1.shape[0:2]
+# www = img1.shape[0:2]
+img2 = cv.imread(r"test_case2.png")
 # # img = img1[0:426,43:400]
-# rows,cols = img1.shape[0:2]
-www = img1.shape[0:50]
-# img2 = cv.imread(r"test_case2.png")
-# # img = img1[0:426,43:400]
-# roi = img2[0:rows,0:cols]
+roi = img2[0:rows,0:cols]
 # img1_gray = cv.cvtColor(img1,cv.COLOR_BGR2GRAY)
 #
 # ret,img1_thres = cv.threshold(img1_gray,200,255,cv.THRESH_BINARY_INV)
@@ -74,8 +74,6 @@ www = img1.shape[0:50]
 # cv.imshow("img_add",img_add)
 # cv.imshow("img2",img2)
 
-print(www)
-cv.imshow("img2",www)
 
-cv.waitKey(0)
+cv.waitKey()
 cv.destroyAllWindows()
