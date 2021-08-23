@@ -37,6 +37,6 @@ def compute_ssim(im1, im2, k1=0.01, k2=0.03, win_size=11, L=255):
     return np.mean(np.mean(ssim_map))
 
 if __name__ == "__main__":
-    image1 = Image.open('image1.png')
-    image2 = Image.open('image2.png')
+    image1 = Image.open(r'.\Source_Pics\Standard_pics\image5.png')
+    image2 = Image.open(r'.\Source_Pics\Standard_pics\image6.png')
     print(compute_ssim(np.array(image1.resize((8, 8), Image.ANTIALIAS).convert('L'), 'f'),np.array(image2.resize((8, 8), Image.ANTIALIAS).convert('L'), 'f')))
