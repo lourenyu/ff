@@ -13,7 +13,7 @@ import time
 # a = os.path.exists('/Users/lu/Desktop/export.json') #判断指定文件是否存在
 # print(a)
 
-walk(top, topdown=True, οnerrοr=None, followlinks=False) #遍历文件夹名称
+os.walk(top, topdown=True, οnerrοr=None, followlinks=False) #遍历文件夹名称
 
 # Dict_Installation_package = { #安装包目录，标明更新时间
 #     "文件名":"2021-8-18"
