@@ -1,5 +1,5 @@
 import cv2
-img = cv2.imread(r"./Source_Pics/Test_Pics/test_case.png")
+img = cv2.imread(r"../Source_Pics/Test_Pics/test_case.png")
 cv2.imshow('orgin1', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
