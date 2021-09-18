@@ -26,16 +26,16 @@
 
 
 
-# import cv2
-# img = cv2.imread(r"../Source_Pics/Test_Pics/LOG_IN_BG.png")  #读取图片
-# print(img.shape) #打印height,length，通道数
-# img_gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)  #rgb转码bgr
-# ret,img_threshold = cv2.threshold(img_gray,150,255,cv2.THRESH_BINARY)  #图像二值化（0~255）
-# cv2.imshow("img",img) #输出图片img，命名img
-# cv2.imshow("thre",img_threshold) #输出图片img_threshold，命名thre
-# key = cv2.waitKey(0) #图片停留时间，1=1ms，0=forever
-# if key==27: #按esc键时，关闭所有窗口
-#     print(key)
-#     cv2.destroyAllWindows()
-# cv2.imwrite(r"..\Source_Pics\Test_Pics\1.png",img_threshold) #保存图片img_threshold到此路径
+import cv2
+img = cv2.imread(r"../Source_Pics/Test_Pics/LOG_IN_BG.png")  #读取图片
+print(img.shape) #打印height,length，通道数
+img_gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)  #rgb转码bgr
+ret,img_threshold = cv2.threshold(img_gray,150,255,cv2.THRESH_BINARY)  #图像二值化（0~255）
+cv2.imshow("img",img) #输出图片img，命名img
+cv2.imshow("thre",img_threshold) #输出图片img_threshold，命名thre
+key = cv2.waitKey(0) #图片停留时间，1=1ms，0=forever
+if key==27: #按esc键时，关闭所有窗口
+    print(key)
+    cv2.destroyAllWindows()
+cv2.imwrite(r"..\Source_Pics\Test_Pics\1.png",img_threshold) #保存图片img_threshold到此路径
 

@@ -195,7 +195,7 @@ def runAllImageSimilaryFun(para1, para2):
     hash1 = aHash(img1)
     hash2 = aHash(img2)
     n1 = cmpHash(hash1, hash2)
-    print('均值hash算法相似度aHash：%d',100-n1)
+    print('均值hash算法相似度aHash：',100-n1)
 
     hash1 = dHash(img1)
     hash2 = dHash(img2)
