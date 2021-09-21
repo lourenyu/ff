@@ -1,5 +1,4 @@
 # coding=utf-8
-
 #音效资源name规范检测
 #美术资源name规
 #程序资源name规范检测

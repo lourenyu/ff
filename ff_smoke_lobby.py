@@ -7,14 +7,19 @@ import pyautogui as pg
 location=pg.locateOnScreen(image=r'C:\Users\renyu.lou\Desktop\py\ff\TAP TO BEGIN.png') #判定目标截图在系统上的位置
 print(location)#输出坐标
 
-
+def loop_start(func):
+    def dectory():
+        func()
+    return dectory()
+        
 #拉取log
 class FFMandroidSmoke:
-
+    
+    # 结果统计
     def __init__(self):
         #异常处理统计
         self.pass_count = 0  # FreeFireMAXandroidSmoke+= 1
-        self.filed_count = 0  # FreeFireMAXandroidSmoke+= 1
+        self.failed_count = 0  # FreeFireMAXandroidSmoke+= 1
 
     # 登陆
     def check_login(self):
@@ -185,20 +190,6 @@ class FFMandroidSmoke:
 
     # 电池
     def check_ui_battery(self):
-        # 点击
-        # 截图
-        # 点击&切换tab
-        pass
-
-    # 电池
-    def check_ui_battery(self):
-        # 点击
-        # 截图
-        # 点击&切换tab
-        pass
-
-    # 模式选择
-    def check_ui_mode_selection(self):
         # 点击
         # 截图
         # 点击&切换tab
