@@ -22,4 +22,6 @@ x = MyClass()
 print("MyClass 类的属性 i 为：", x.i)
 print("MyClass 类的方法 f 输出为：", x.n())
 print("MyClass 类的方法 f 输出为：", x.m())
-print("MyClass 类的方法 f 输出为：", x.f)
+print("MyClass 类的属性 f 输出为：", x.f)
+
+

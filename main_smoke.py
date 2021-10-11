@@ -13,7 +13,6 @@ order(text="Free Fire").click() #打开应用Free Fire
 # order(text="Free Fire MAX").click() #打开应用Free Fire MAX
 
 order.click(0.685, 0.651)#判断--权限说明
-
 order.click(0.488, 0.671)#判断--照片访问d.click(0.488, 0.671)
 
 #garena logo
@@ -28,7 +27,6 @@ order.click(0.497, 0.848) #TAP TO BEGIN
 #弹窗-活动-日常任务
 #弹窗-活动-充值LEVEL UP PASS
 order.click(0.871, 0.198) #BOOYAH DAY
-
 
 @loop_start
 #流程

@@ -9,8 +9,7 @@ def loop_start_roomlobby(func):
     return dectory()
 
 
-class FFMandroidSmoke_roomlobby:
-
+class FFM_android_smoke_roomlobby:
     # 结果统计
     def __init__(self):
         # 异常处理统计
