@@ -2,11 +2,13 @@ import os
 import uiautomator2 as u2
 import time
 
-from ff_install_apk import *
+from ff_install_apk import AdbInstallGpApk
 
 #主流程运行计时
 t1 = time.time()
 print("计算过程")
+
+AdbInstallGpApk()
 
 # order = u2.connect('RFCNA0FJPXY') #链接手机&模拟器
 #安装包
