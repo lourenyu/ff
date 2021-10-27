@@ -6,7 +6,6 @@ from ff_install_apk import AdbInstallGpApk
 
 #主流程运行计时
 t1 = time.time()
-print("计算过程")
 
 AdbInstallGpApk()
 
