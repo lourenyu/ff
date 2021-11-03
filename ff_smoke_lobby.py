@@ -22,6 +22,7 @@ class FFMandroidSmoke:
         self.failed_count = 0  # FreeFireMAXandroidSmoke+= 1
 
     # 登陆
+    @loop_start
     def check_login(self):
         print("登陆成功")
         # 点击

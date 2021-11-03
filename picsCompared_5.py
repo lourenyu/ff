@@ -5,6 +5,7 @@
 #输出对比数据
 #数据统计
 #给出结果
+import time
 
 import cv2 #opencv-python库
 import numpy as np  #矩阵运算库
@@ -15,6 +16,9 @@ import matplotlib #绘图库
 
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+
+
+t1 = time.time()
 
 def aHash(img):
     # 均值哈希算法
@@ -42,7 +46,7 @@ def aHash(img):
 
 
 def dHash(img):
-    # 差值哈希算法
+    # 差值哈希
     # 缩放8*8
     img = cv2.resize(img, (9, 8))
     # 转换灰度图
@@ -175,40 +179,33 @@ def runAllImageSimilaryFun(para1, para2):
     # 均值、差值、感知哈希算法三种算法值越小，则越相似,相同图片值为0
     # 三直方图算法和单通道的直方图 0-1之间，值越大，越相似。 相同图片为1
 
-    # t1,t2   14;19;10;  0.70;0.75
-    # t1,t3   39 33 18   0.58 0.49
-    # s1,s2  7 23 11     0.83 0.86  挺相似的图片
-    # c1,c2  11 29 17    0.30 0.31
-
     if para1.startswith("http"):
-        # 根据链接下载图片，并转换为opencv格式
         img1 = getImageByUrl(para1)
         img1 = cv2.cvtColor(np.asarray(img1), cv2.COLOR_RGB2BGR)
 
         img2 = getImageByUrl(para2)
         img2 = cv2.cvtColor(np.asarray(img2), cv2.COLOR_RGB2BGR)
     else:
-        # 通过imread方法直接读取物理路径
         img1 = cv2.imread(para1)
         img2 = cv2.imread(para2)
 
     hash1 = aHash(img1)
     hash2 = aHash(img2)
     n1 = cmpHash(hash1, hash2)
-    print('均值hash算法相似度aHash：',100-n1)
+    print('均值hash，aHash：',100-n1)
 
     hash1 = dHash(img1)
     hash2 = dHash(img2)
     n2 = cmpHash(hash1, hash2)
-    print('差值hash算法相似度dHash：', n2)
+    print('差值hash，dHash：', n2)
 
     hash1 = pHash(img1)
     hash2 = pHash(img2)
     n3 = cmpHash(hash1, hash2)
-    print('感知hash算法相似度pHash：', n3)
+    print('感知hash，pHash：', n3)
 
     n4 = classify_hist_with_split(img1, img2)
-    print('三直方图算法相似度：', n4)
+    print('三直方图：', n4)
 
     n5 = calculate(img1, img2)
     print("单通道的直方图", n5)
@@ -221,8 +218,14 @@ def runAllImageSimilaryFun(para1, para2):
     plt.imshow(Image.fromarray(cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)))
     plt.show()
 
+
+#路径
 if __name__ == "__main__":
-    p1 = "https://ww3.sinaimg.cn/bmiddle/007INInDly1g336j2zziwj30su0g848w.jpg"
-    p2 = "https://ww2.sinaimg.cn/bmiddle/007INInDly1g336j10d32j30vd0hnam6.jpg"
+    p1 = ""
+    p2 = ""
     runAllImageSimilaryFun(p1, p2)
 
+
+t2 = time.time()
+t = t2 - t1
+print(t)
