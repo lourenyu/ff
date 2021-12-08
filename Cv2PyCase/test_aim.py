@@ -16,6 +16,7 @@ class MyClass:
         return "hello c++"
 
 # 实例化类
+
 x = MyClass()
 
 # 访问类的属性和方法
