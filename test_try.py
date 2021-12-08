@@ -18,7 +18,6 @@ def funA(fn):
     print("damn 2")
     return "body"
 
-
 @funA
 def funB():
     print("fuck c")

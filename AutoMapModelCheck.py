@@ -5,17 +5,17 @@ import cv2
 # import argparse 解析器，后面用
 
 
-def timer(fun):
+def timer(func):
 	time_start = time.time()
-	fun()
+	func()
 	time_end = time.time()
 	spent_time = time_end - time_start
 	print("spent time:{}".format(spent_time))
 
 @timer
-def comapred_imgAB():
-	imageA = cv2.imread("Source_Pics/Test_Pics/shipyard1.png")
-	imageB = cv2.imread("Source_Pics/Test_Pics/shipyard2.png")
+def comapred_imgAB(path_A,path_B):
+	imageA = cv2.imread(path_A)
+	imageB = cv2.imread(path_B)
 	grayA = cv2.cvtColor(imageA, cv2.COLOR_BGR2GRAY)
 	grayB = cv2.cvtColor(imageB, cv2.COLOR_BGR2GRAY)
 	(score, diff) = ssim(grayA, grayB, full=True)
@@ -27,7 +27,11 @@ def comapred_imgAB():
 		(x, y, w, h) = cv2.boundingRect(c)
 		cv2.rectangle(imageA, (x, y), (x + w, y + h), (0, 0, 255), 2)
 		cv2.rectangle(imageB, (x, y), (x + w, y + h), (0, 0, 255), 2)
+	return imageA,imageB
 
+path_A = "Source_Pics/Test_Pics/shipyard1.png"
+path_B = "Source_Pics/Test_Pics/shipyard2.png"
+(imageA,imageB) = comapred_imgAB(path_A,path_B)
 
 # 加载两个输入图像,注意要相同尺寸
 # imageA = cv2.imread("Source_Pics/Standard_pics/hanger.png")
