@@ -20,6 +20,8 @@ import matplotlib.pyplot as plt
 
 t1 = time.time()
 
+
+
 def aHash(img):
     # 均值哈希算法
     # 缩放为8*8
