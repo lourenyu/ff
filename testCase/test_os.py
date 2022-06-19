@@ -5,3 +5,6 @@ str3 = '192.168.3.142:5555'
 print(len(str1))
 print(len(str2))
 print(len(str3))
+#13
+#16
+#18

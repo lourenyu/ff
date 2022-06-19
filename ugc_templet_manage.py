@@ -1,8 +1,5 @@
 import os
-
-#adb命令
 import sys
-
 
 def adb_command(command):
     """
@@ -18,7 +15,6 @@ def adb_test():
     :return: 
     '''
     print(adb_command('devices'))
-
 
 #ugc文件本地上传手机客端
 def ugc_adb_pushmap(equis, file_origin, file_aim):
@@ -55,12 +51,7 @@ def ugc_adb_pullmap(equis, file_aim, file_origin):
     # adb pull “/sdcard/test” “X:\Garena\ugc\tamplets”
 
     #adb -s emulator-5554 push "X:\Garena\ugc\tamplets\test" "/sdcard/"
-
-
     #/sdcard/Android/data/com.dts.freefireth/files/Workshop
-    #adb -s emulator-5554 pull X:\Garena\ugc\tamplets\test /sdcard/Android/
-
-
 
 def main():
     try:
@@ -99,7 +90,6 @@ def main():
     finally:
         # print('Done')
         pass
-
 
 if __name__ == '__main__':
     main()
