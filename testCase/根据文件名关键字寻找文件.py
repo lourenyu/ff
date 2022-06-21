@@ -34,9 +34,9 @@ def moveFiles(filepath, filenames, str, target_filename):
 
 
 def main():
-    filepath = r"X:\Garena\ugc\log"  # 文件所在的文件夹路径
+    filepath = r"C:\Users\renyu.lou\Desktop\ugc\log1"  # 文件所在的文件夹路径
     str = 'debugger'  # 该文件所包含的目标字符串
-    target_filename = r'X:\Garena\ugc\log1'  # 保存的目标文件夹
+    target_filename = r'C:\Users\renyu.lou\Desktop\ugc\log2'  # 保存的目标文件夹
     filenames = listFiles(filepath)  # 获取该文件夹下的所有文件名，并保存为一个List返回
     moveFiles(filepath, filenames, str, target_filename)  # 移动
 
