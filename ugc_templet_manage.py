@@ -41,7 +41,6 @@ def ugc_adb_pullmap(equis, file_aim, file_origin):
     pullstr = ('adb -s %s pull "%s" "%s"' % (equis, file_aim, file_origin))
     print(pullstr)
     os.system(pullstr)
-    # os.system(fr"adb -s %s pull /sdcard/temp.mp4 %s" % (android_serial, save_path))
 
     #文件*
     #adb push "X:\Garena\ugc\tamplets\test.txt" "/sdcard/"
@@ -49,9 +48,6 @@ def ugc_adb_pullmap(equis, file_aim, file_origin):
     #文件夹*
     # adb push "X:\Garena\ugc\tamplets\test" "/sdcard/"
     # adb pull “/sdcard/test” “X:\Garena\ugc\tamplets”
-
-    #adb -s emulator-5554 push "X:\Garena\ugc\tamplets\test" "/sdcard/"
-    #/sdcard/Android/data/com.dts.freefireth/files/Workshop
 
 def main():
     try:

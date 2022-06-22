@@ -39,13 +39,12 @@ def main():
     except:
         pass
     finally:
+        #关闭文件，释放内存
         for fs in fs_list:
             fs.close()
         log_file.close()
         for filename in filenames:
             shutil.move(filename, "C:/Users/renyu.lou/Desktop/ugc/log2")
-
-
 
 if __name__ == '__main__':
     main()

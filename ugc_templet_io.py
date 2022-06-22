@@ -17,7 +17,7 @@ def ugc_adb_pushmap(equi,file1_orign, file2_aim):
     os.system('adb -s %s pull "%s" %s' % (equi, file1_orign, file2_aim))
 
 
-    #adb -s emulator-5558 pull "/sdcard/Android/data/com.dts.freefireth/files/Workshop" C:/Users/renyu.lou/Desktop/ugc/tamplets
+#adb -s emulator-5558 pull "/sdcard/Android/data/com.dts.freefireth/files/Workshop" C:/Users/renyu.lou/Desktop/ugc/tamplets
 
 
 def main():
