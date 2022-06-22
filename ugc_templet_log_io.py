@@ -1,6 +1,5 @@
 import os
 import shutil
-import sys
 
 
 def listFiles(filepath):
@@ -34,10 +33,10 @@ def moveFiles(filepath, filenames, str, target_filename):
 
 def main():
     # 读取远程文件不稳定，先将远程文件拉到本地
-    # os.system(r'adb -s emulator-5554 pull "/sdcard/Android/data/com.dts.freefireth/files" "X:\Garena\ugc"')
-    filepath = r"X:\Garena\ugc\files"  # 文件所在的文件夹路径
+    os.system(r'adb -s emulator-5554 pull "/sdcard/Android/data/com.dts.freefireth/files" "C:\Users\renyu.lou\Desktop\ugc\files"')
+    filepath = r"C:\Users\renyu.lou\Desktop\ugc\files"  # 文件所在的文件夹路径
     str = 'debugger'  # 该文件所包含的目标字符串
-    target_filename = r'X:\Garena\ugc\log1'  # 保存的目标文件夹
+    target_filename = r'C:\Users\renyu.lou\Desktop\ugc\log_org'  # 保存的目标文件夹
     filenames = listFiles(filepath)  # 获取该文件夹下的所有文件名，并保存为一个List返回
     print("List内容:",filenames)
     print("文件列表长度：",len(filenames))

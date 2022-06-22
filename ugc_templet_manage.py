@@ -63,19 +63,18 @@ def main():
         if len(equis) < 13:
             sys.exit()
         print('--------------------------------------------------------------------')
-
         key1 = input("上传文件打1，导出文件打2\n")
         if key1 == '1':#upload
-            file_origin = input('#示例\nC:/Users/renyu.lou/Desktop/ugc/tamplets/Workshop\n请输入本地路径:')
+            file_origin = input('#示例\nC:/Users/renyu.lou/Desktop/ugc/tamplets/Workshop/account id\n请输入本地路径:')
             print('---------------------------------------------------------')
-            file_aim = input('#示例\n文件夹：/sdcard/Android/data/com.dts.freefireth/files\n请输入设备路径:')
+            file_aim = input('#示例\n文件夹：/sdcard/Android/data/com.dts.freefireth/files/Workshop/account id\n请输入设备路径:')
             print('----------------------------------------------------------------------------------')
             ugc_adb_pushmap(equis, file_origin, file_aim)
 
         elif key1 == '2':#download
-            file_aim = input('#示例\n文件夹：/sdcard/Android/data/com.dts.freefireth/files/Workshop\n请输入设备路径:')
+            file_aim = input('#示例\n文件夹：/sdcard/Android/data/com.dts.freefireth/files/Workshop/\n请输入设备路径:')
             print('----------------------------------------------------------------------------------')
-            file_origin = input('#示例\nC:/Users/renyu.lou/Desktop/ugc/tamplets\n请输入本地路径:')
+            file_origin = input('#示例\nC:/Users/renyu.lou/Desktop/ugc/tamplets/\n请输入本地路径:')
             print('---------------------------------------------------------')
             ugc_adb_pullmap(equis, file_aim, file_origin)
         else:
