@@ -27,7 +27,7 @@ def main():
         for filename in filenames:
             fs_list.append(open(filename, 'w',encoding='utf-8'))
         # 从TXT文件中读出数据
-        with open(r"C:\Users\renyu.lou\Desktop\ugc\files\debugger-2022-06-21T20-44-04.log", mode='r', encoding='utf-8') as log_file:
+        with open(r"C:\Users\renyu.lou\Desktop\ugc\files\debugger-2022-06-22T01-58-42.log", mode='r', encoding='utf-8') as log_file:
             for line in log_file:
                 if line.find("error") != -1: #根据指定字符串查当前行
                     fs_list[0].write(line)
