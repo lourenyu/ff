@@ -1,4 +1,5 @@
 import time
+<<<<<<< HEAD
 import pyautogui
 import xlrd
 import cv2
@@ -44,3 +45,42 @@ time.sleep(3)
 pyautogui.write('hello world',interval=1) # 打印书hellow world 每个字符后延迟0.25秒
 pyautogui.alert(text='hello',title='world',button='OK') # 显示一个带有文本和确定按钮的简单消息框，用户点击返回button的文本
 pyautogui.confirm(text='',title='',buttons=['OK','Cancel']) #显示带有确定和取消按钮的消息框，可以自定义按钮的数量和文本，点击返回按钮的文本
+=======
+
+import pyautogui as pyg
+
+def MousePosShow():
+    """
+    mouse_pos = 鼠标位置
+    :return:
+    """
+    while True:
+        mouse_pos = pyg.position()
+        print(mouse_pos)
+        time.sleep(0.5)
+
+def main():
+    try:
+        MousePosShow()
+        #目标模拟器尺寸(920,550),分辨率(1600*900)
+        #启动游戏
+        #登陆
+        #点击匹配入口
+        #点击UGC入口
+          #关闭UGC introduction
+          #提前买够房卡，确认角色等级在lv8以上
+        #点击UGC自定义模板tab
+        #点击模板
+
+
+
+    except:
+        pass
+    finally:
+        pass
+
+
+
+if __name__ == '__main__':
+    main()
+>>>>>>> 5c9b77e08b4d359b51c3d5083b7caafaee16f029
