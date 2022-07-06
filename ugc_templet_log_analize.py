@@ -23,7 +23,7 @@ def main():
     filenames = ('error.log',)
     fs_list = []
     try:
-        #装弹
+        #reload
         for filename in filenames:
             fs_list.append(open(filename, 'w',encoding='utf-8'))
         # 从TXT文件中读出数据
